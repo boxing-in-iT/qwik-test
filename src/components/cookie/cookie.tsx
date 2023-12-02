@@ -1,4 +1,4 @@
-import { $, PropFunction, component$ } from "@builder.io/qwik";
+import { PropFunction, component$ } from "@builder.io/qwik";
 
 interface CookieProps {
   onClick$?: PropFunction<() => void>;

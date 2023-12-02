@@ -1,7 +1,5 @@
-import { $, component$, useId, useSignal } from "@builder.io/qwik";
+import { $, component$, useSignal } from "@builder.io/qwik";
 import Unity from "../../assets/img/header/unity.svg";
-import btnOn from "../../assets/img/Frame 20913.svg";
-import langUA from "../../assets/img/flags/langUa.svg";
 import arrowUp from "../../assets/img/arrowUp.svg";
 import arrowDown from "../../assets/img/arrowDown.svg";
 import volumeOn from "../../assets/img/volumeOn.svg";
@@ -15,20 +13,6 @@ export const UnityMenu = component$(() => {
   const isUnityClicked = useSignal<boolean>(false);
   const isModalVisible = useSignal<boolean>(false);
   const isVolumeOn = useSignal<boolean>(true);
-  const inputValue = useSignal("");
-
-  const textareaEventListener = $(() => {
-    const txtarea = document.getElementById("txtArea");
-    if (txtarea instanceof HTMLTextAreaElement) {
-      const lines = txtarea.value.split("\n").length;
-      txtarea.rows = lines;
-      console.log(lines);
-    }
-  });
-
-  const handleInputChange = $((e: any) => {
-    inputValue.value = e.target.value;
-  });
 
   const handleArrowUpClick = $(() => {
     isModalVisible.value = !isModalVisible.value;

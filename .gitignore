@@ -39,3 +39,9 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
+
+# Netlify
+.netlify
+
+# Vercel
+.vercel
